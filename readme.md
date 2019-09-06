@@ -16,6 +16,7 @@ microservice-springcloud-consumer-dept-80是微服务消费者。
 >springcloud的学习：
 >>REST方式实现微服务之间的调用；  
 >>eureka实现微服务之间的注册于发现；  
->>ribbon实现负载均衡。。。。。。待完善；
+>>ribbon实现负载均衡： 
+>>>consumer使用@LoadBalanced实现了轮询；
 
 
