@@ -28,6 +28,5 @@ hs_err_pid*
 /microservice-springcloud-eureka-server-8762/target/
 /microservice-springcloud-eureka-server-8763/target/
 /microservice-springcloud-provider-dept-8001/target/
-/microservice-springcloud-provider-dept-8002/
-/microservice-springcloud-provider-dept-8002/
-/microservice-springcloud-provider-dept-8003/
+/microservice-springcloud-provider-dept-8002/target/
+/microservice-springcloud-provider-dept-8003/target/
