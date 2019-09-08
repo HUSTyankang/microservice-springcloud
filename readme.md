@@ -17,6 +17,13 @@ microservice-springcloud-consumer-dept-80是微服务消费者。
 >>REST方式实现微服务之间的调用；  
 >>eureka实现微服务之间的注册于发现；  
 >>ribbon实现负载均衡： 
->>>consumer使用@LoadBalanced实现了轮询；
+>>>1.轮询：consumer使用@LoadBalanced实现了轮询；    
+>>>2.随机：使用RandomRule()；   
+```java  
+@Bean    
+public IRule myRule(){   
+    return new RandomRule(); //用随机算法替代默认的轮询算法。  
+}
+```
 
 
