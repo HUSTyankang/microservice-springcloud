@@ -18,14 +18,14 @@ microservice-springcloud-consumer-dept-80是微服务消费者。
 三、ribbon实现负载均衡：   
 &emsp;1.轮询：consumer使用@LoadBalanced实现了轮询；    
 &emsp;2.随机：使用RandomRule()；   
-```  
+```java
 @Bean    
 public IRule myRule(){   
     return new RandomRule(); //用随机算法替代默认的轮询算法。  
 }
 ```
 &emsp;3.Retry：使用RetryRule()；
-```
+```java
 @Bean
  public IRule myRule(){
     //先轮询，如果服务宕机，则会再指定的时间内重试，获取可用的服务。
