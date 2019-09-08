@@ -45,14 +45,16 @@ public class ConsumerApplication80 {
     }
 }
 ```
-&emsp;自定义的Ribbon配置类：
+&emsp;自定义的Ribbon配置类：    
+修改了[RandomRule的源代码](https://github.com/Netflix/ribbon/blob/master/ribbon-loadbalancer/src/main/java/com/netflix/loadbalancer/RandomRule.java)对微服务进行轮询策略的访问，每个服务访问五次；
 ```java
 @Configuration
 public class MyselfRule {
     @Bean
     public IRule myRule(){
-        return new RandomRule();
+        return new MyRule_YanKang();
     }
 }
 ```
+
 
