@@ -9,16 +9,15 @@ eureka集群，他们之间相互注册；
 microservice-springcloud-provider-dept-8001、microservice-springcloud-provider-dept-8002、microservice-springcloud-provider-dept-8003是三个微服务提供者；  
 microservice-springcloud-consumer-dept-80是微服务消费者。
 ## 学习知识
->springboot的学习：
->>对dao、service、controller三层的学习与理解；  
->>对mybatis的学习。 
-> 
->springcloud的学习：
->>REST方式实现微服务之间的调用；  
->>eureka实现微服务之间的注册于发现；  
->>ribbon实现负载均衡： 
->>>1.轮询：consumer使用@LoadBalanced实现了轮询；    
->>>2.随机：使用RandomRule()；   
+### springboot的学习：
+对dao、service、controller三层的学习与理解；  
+对mybatis的学习。 
+### springcloud的学习：
+一、REST方式实现微服务之间的调用；  
+二、eureka实现微服务之间的注册于发现；  
+三、ribbon实现负载均衡：   
+&emsp;1.轮询：consumer使用@LoadBalanced实现了轮询；    
+&emsp;2.随机：使用RandomRule()；   
 ```java  
 @Bean    
 public IRule myRule(){   
