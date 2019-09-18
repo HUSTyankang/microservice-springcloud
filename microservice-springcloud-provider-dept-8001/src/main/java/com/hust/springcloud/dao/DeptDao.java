@@ -8,7 +8,7 @@ import java.util.List;
 @Mapper
 public interface DeptDao {
     boolean addDept(Dept dept);
-    Dept findById(Long id);
+    Dept findById(long id);
     List<Dept> findAll();
 
 }
