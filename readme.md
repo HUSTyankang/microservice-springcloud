@@ -56,5 +56,65 @@ public class MyselfRule {
     }
 }
 ```
+四、feign：旨在使编写Java Http客户端变得更容易  
+在feign的实现下，我们只需要创建一个接口并使用注解方式来配置http请求，即可完成对服务提供方的接口的绑定，简化了使用springcloud ribbon是自动封装微服务调用客户端的开发量。   
+&emsp;在microservice-springcloud-api中的com.hust.springcloud添加service包：  
+```java
+@Configuration
+@FeignClient(value = "microservice-springcloud-dept")
+public interface DeptClientService {
+
+//    @GetMapping(value = "/dept/get/{id}")
+    @RequestMapping(value = "/dept/get/{id}",method = RequestMethod.GET,produces = "application/json; charset=UTF-8")
+    Dept get(@PathVariable("id") long id);
+
+//    @GetMapping(value = "/dept/list")
+    @RequestMapping(value = "/dept/list",method = RequestMethod.GET,produces = "application/json; charset=UTF-8")
+    List<Dept> list();
+
+//    @PostMapping(value = "/dept/add")
+    @RequestMapping(value = "/dept/add",method = RequestMethod.POST,produces = "application/json; charset=UTF-8")
+    boolean add(Dept dept);
+}
+```
+&emsp;在microservice-springcloud-consumer-dept-feign中的controller下：
+```java
+@RestController
+public class DeptConsumerController {
+
+    @Autowired
+    DeptClientService deptClientService;
+
+//    @PostMapping(value = "/consumer/dept/add")
+    @RequestMapping(value = "/consumer/dept/add",method = RequestMethod.POST)
+    public boolean add(@RequestBody Dept dept) {
+        return deptClientService.add(dept);
+
+    }
+
+//    @GetMapping(value = "/consumer/dept/get/{id}")
+    @RequestMapping(value = "/consumer/dept/get/{id}",method = RequestMethod.GET)
+    public Dept get(@PathVariable("id") long id){
+        return deptClientService.get(id);
+    }
+
+//    @GetMapping(value = "/consumer/dept/list")
+    @RequestMapping(value = "/consumer/dept/list",method = RequestMethod.GET)
+    public List<Dept> list(){
+        return deptClientService.list();
+    }
+}
+```
+&emsp;feign的主启动类下添加@EnableFeignClients(basePackages = {"com.hust.springcloud"})注解：
+```java
+@SpringBootApplication
+@EnableEurekaClient
+@EnableFeignClients(basePackages = {"com.hust.springcloud"})
+public class ConsumerApplicationFeign {
+    public static void main(String[] args) {
+        SpringApplication.run(ConsumerApplicationFeign.class,args);
+    }
+}
+```
 
 

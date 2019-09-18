@@ -105,6 +105,7 @@
         <module>microservice-springcloud-provider-dept-8001</module>
         <module>microservice-springcloud-provider-dept-8002</module>
         <module>microservice-springcloud-provider-dept-8003</module>
+        <module>microservice-springcloud-consumer-dept-feign</module>
     </modules>
 
 </project>

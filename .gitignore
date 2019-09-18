@@ -24,6 +24,7 @@ hs_err_pid*
 # Project exclude paths
 /microservice-springcloud-api/target/
 /microservice-springcloud-consumer-dept-80/target/
+/microservice-springcloud-consumer-dept-feign/target/
 /microservice-springcloud-eureka-server-8761/target/
 /microservice-springcloud-eureka-server-8762/target/
 /microservice-springcloud-eureka-server-8763/target/
