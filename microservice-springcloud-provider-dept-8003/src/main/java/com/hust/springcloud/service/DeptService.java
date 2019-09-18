@@ -6,6 +6,6 @@ import java.util.List;
 
 public interface DeptService {
     boolean addDept(Dept dept);
-    Dept findById(Long id);
+    Dept findById(long id);
     List<Dept> findAll();
 }
