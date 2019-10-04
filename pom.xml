@@ -106,6 +106,7 @@
         <module>microservice-springcloud-provider-dept-8002</module>
         <module>microservice-springcloud-provider-dept-8003</module>
         <module>microservice-springcloud-consumer-dept-feign</module>
+        <module>microservice-springcloud-provider-dept-hystrix-8001</module>
     </modules>
 
 </project>

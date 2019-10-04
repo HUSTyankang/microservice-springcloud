@@ -31,3 +31,4 @@ hs_err_pid*
 /microservice-springcloud-provider-dept-8001/target/
 /microservice-springcloud-provider-dept-8002/target/
 /microservice-springcloud-provider-dept-8003/target/
+/microservice-springcloud-provider-dept-hystrix-8001/target/

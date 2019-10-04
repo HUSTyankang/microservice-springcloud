@@ -116,5 +116,7 @@ public class ConsumerApplicationFeign {
     }
 }
 ```
+五、Hystrix断路器
+
 
 
