@@ -7,8 +7,8 @@ microservice-springcloud-api是公用模块；
 microservice-springcloud-eureka-server-8761、microservice-springcloud-eureka-server-8762、microservice-springcloud-eureka-server-8763构成
 eureka集群，他们之间相互注册；  
 microservice-springcloud-provider-dept-8001、microservice-springcloud-provider-dept-8002、microservice-springcloud-provider-dept-8003是三个微服务提供者；  
-microservice-springcloud-consumer-dept-80是微服务消费者；
-microservice-springcloud-consumer-dept-feign是使用feign来消费服务；
+microservice-springcloud-consumer-dept-80是微服务消费者；   
+microservice-springcloud-consumer-dept-feign是使用feign来消费服务；  
 microservice-springcloud-provider-dept-hystrix-8001是Hystrix。
 ## 学习知识
 ### springboot的学习：
